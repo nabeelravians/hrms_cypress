@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-10-05T07:13:53.941Z",
+    "end": "2021-10-05T07:14:11.145Z",
+    "duration": 17204,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9eaee5ac-cf8a-4256-8747-cc575aeab137",
+      "title": "",
+      "fullFile": "cypress/integration/my_first_test.js",
+      "file": "cypress/integration/my_first_test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "cypress assignment",
+          "fullTitle": "cypress assignment",
+          "timedOut": null,
+          "duration": 5919,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('http://10.4.10.105/dashboard');\ncy.get('input[name=\"username\"]').type('nisumAdmin');\ncy.get('input[name=\"password\"]').type('super');\ncy.get('.el-button--primary > span').click();\ncy.get('.display_name').should('have.text', 'Test 1233');\ncy.get('.sidebar-title').should('have.text', 'KHUSHAMDEED'); //    cy.get('#txtUsername').type('Admin')\n//    cy.get('#txtPassword').type('admin123')\n//\n//   // cy.get('#welcome').should('have.text', 'Welcome Samsodn');       //WITH TRADITIONAL APPROACH UI\n//   cy.intercept('https://opensource-demo.orangehrmlive.com/index.php/auth/validateCredentials').as('getComment')\n//   cy.get('#btnLogin').click()\n//   cy.wait('@getComment').its('response.statusCode').should('eq',301)",
+          "err": {},
+          "uuid": "dcc3a589-9765-4786-b2ea-78569d4e5675",
+          "parentUUID": "9eaee5ac-cf8a-4256-8747-cc575aeab137",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "verifyEmployeesModules",
+          "fullTitle": "verifyEmployeesModules",
+          "timedOut": null,
+          "duration": 7406,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('http://10.4.10.105/dashboard');\ncy.get('input[name=\"username\"]').type('nisumAdmin');\ncy.get('input[name=\"password\"]').type('super');\ncy.get('.el-button--primary > span').click();\ncy.get('.router-link-exact-active > .el-menu-item').should('have.text', 'Dashboard');\ncy.get('[role=\"menubar\"] > :nth-child(2) > a > .el-menu-item').should('have.text', 'Monthly Activities');\ncy.get(':nth-child(3) > .el-submenu > .el-submenu__title').should('have.text', 'Attendance Management');\ncy.get(':nth-child(4) > .el-submenu > .el-submenu__title').should('have.text', 'Leaveeßs Management');\ncy.get(':nth-child(5) > .el-submenu > .el-submenu__title').should('have.text', 'Team Management');\ncy.get(':nth-child(6) > .el-submenu > .el-submenu__title').should('have.text', 'Request Management');\ncy.get(':nth-child(7) > .el-submenu > .el-submenu__title').should('have.text', 'Reimbursement Management');\ncy.get(':nth-child(8) > .el-submenu > .el-submenu__title').should('have.text', 'Employees');",
+          "err": {
+            "message": "AssertionError: Timed out retrying after 5000ms: expected '<div.el-submenu__title>' to have text 'Leaveeßs Management', but the text was 'Leaves Management'",
+            "estack": "AssertionError: Timed out retrying after 5000ms: expected '<div.el-submenu__title>' to have text 'Leaveeßs Management', but the text was 'Leaves Management'\n    at Context.eval (http://10.4.10.105/__cypress/tests?p=cypress/integration/my_first_test.js:122:62)",
+            "diff": "- 'Leaves Management'\n+ 'Leaveeßs Management'\n"
+          },
+          "uuid": "61a3c60d-041d-442e-8115-87d2477a25f3",
+          "parentUUID": "9eaee5ac-cf8a-4256-8747-cc575aeab137",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "verifyHrModules",
+          "fullTitle": "verifyHrModules",
+          "timedOut": null,
+          "duration": 2657,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('http://10.4.10.105/dashboard');\ncy.get('input[name=\"username\"]').type('nisumAdmin');\ncy.get('input[name=\"password\"]').type('super');\ncy.get('.el-button--primary > span').click();\ncy.get('[style=\"margin-left: 50px; margin-top: 10px;\"] > .el-select > .el-input > .el-input__suffix > .el-input__suffix-inner > .el-select__caret').click();\ncy.get('.el-scrollbar__view > :nth-child(2) > span').click();\ncy.get('.router-link-exact-active > .el-menu-item').should('have.text', 'Dashboard');\ncy.get('[role=\"menubar\"] > :nth-child(2) > a > .el-menu-item').should('have.text', 'Monthly Activities');\ncy.get(':nth-child(3) > .el-submenu > .el-submenu__title').should('have.text', 'Employee Management');\ncy.get(':nth-child(4) > .el-submenu > .el-submenu__title').should('have.text', 'Attendance Management');\ncy.get(':nth-child(5) > .el-submenu > .el-submenu__title').should('have.text', 'Event / Leaves Management');\ncy.get(':nth-child(6) > .el-submenu > .el-submenu__title').should('have.text', 'Request Management');\ncy.get(':nth-child(7) > .el-submenu > .el-submenu__title').should('have.text', 'Line Management');",
+          "err": {},
+          "uuid": "3458735b-8bc9-484c-8dae-0b5ecfb7132f",
+          "parentUUID": "9eaee5ac-cf8a-4256-8747-cc575aeab137",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "dcc3a589-9765-4786-b2ea-78569d4e5675",
+        "3458735b-8bc9-484c-8dae-0b5ecfb7132f"
+      ],
+      "failures": [
+        "61a3c60d-041d-442e-8115-87d2477a25f3"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 15982,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.0"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.2.0"
+    }
+  }
+}

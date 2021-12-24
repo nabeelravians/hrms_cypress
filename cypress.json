@@ -1,0 +1,6 @@
+{
+    "watchForFileChanges": false,
+    "defaultCommandTimeout":5000,
+    "reporter":"mochawesome",
+    "video":false
+}
